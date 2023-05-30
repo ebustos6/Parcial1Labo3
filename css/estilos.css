@@ -1,0 +1,114 @@
+
+table{
+    width: 80%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+fieldset{
+    background-color: greenyellow;
+}
+
+th, td{
+    border: 1px solid black;
+    padding: 5px 10px;
+}
+
+th{
+    text-transform: capitalize;
+}
+
+td{
+    text-align: right;
+}
+
+.rowpar{
+    background-color: lightgrey;
+}
+
+header, h2{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion-formulario{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+tr:hover{
+    background-color: green;
+    color: white;
+    cursor: pointer;
+}
+
+form{
+    width: 50%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+input:not(.noCentrar){
+    width: 100%;
+    margin: 0 auto;
+}
+
+input[type="button"], input[type="submit"]
+{
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 32%;
+}
+
+#btnGuardar{
+    background-color: green;
+}
+
+#btnEliminar{
+    background-color: red;
+}
+
+#btnCancelar{
+    background-color: blue;
+}
+
+.spinner{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.spinner-hidden{
+    opacity: 0;
+    visibility: hidden;
+}
+
+.spinner::after{
+    content: "";
+    width: 75px;
+    height: 75px;
+    border: 15px solid #dddddd;
+    border-top-color: #7449f5;
+    border-radius: 50%;
+    animation: loading 0.75s ease infinite;
+}
+
+@keyframes spinning{
+    from{
+        transform: rotate(0turn);
+    }
+    to{
+        transform: rotate(1turn);
+    }
+}

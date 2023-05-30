@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/estilos.css">
+    <script src="./js/scripts.js" type="module" defer></script>
+    <title>Parcial 1</title>
+</head>
+<body>
+    <header>
+        <h1>Crud Anuncios</h1>
+    </header>
+    <main>
+        <section class="seccion-formulario">
+            <h2>Formulario de Alta</h2>
+            <form >
+                <fieldset>
+                    <legend>Informacion del Anuncio</legend>                
+                <p>
+                    <label>TITULO:<br>
+                        <input type="text" name="txtTitulo" placeholder="Titulo" autocomplete="off" required></label>
+                </p>
+                <label>TRANSACCION:<br>
+                    <input type="radio" name="rdoTransaccion" value="Venta" class="noCentrar" checked> VENTA
+                    <br>
+                    <input type="radio" name="rdoTransaccion" value="Alquiler" class="noCentrar"> ALQUILER
+                    <br>
+                </label>
+                <p>
+                    <label>DESCRIPCION:
+                        <input type="text" name="txtDescripcion" placeholder="Descripcion" autocomplete="off" required></label>  
+                    </p>
+                <p>
+                    <label>PRECIO:
+                        <input type="number" name="txtPrecio" placeholder="Precio" min="25000" autocomplete="off" required></label>
+                </p>
+                <p>
+                    <label>CANTIDAD DE BAÑOS:<br>
+                        <input type="number" name="txtBanios" placeholder="Baños" min="1" autocomplete="off" required></label>
+                </p>
+                <p>
+                    <label>CANTIDAD DE AUTOS:<br>
+                        <input type="number" name="txtAutos" placeholder="Autos" min="0" autocomplete="off" required></label> 
+                </p>
+                <p>
+                    <label>CANTIDAD DE DORMITORIOS:<br>
+                        <input type="number" name="txtDormitorios" placeholder="Dormitorios" min="0" autocomplete="off" required></label> 
+                </p>
+                
+            </fieldset>
+            <p>
+             <input type="submit" value="Guardar" id="btnGuardar" class="noCentrar">
+             <input type="button" value="Eliminar" id="btnEliminar" class="noCentrar">
+             <input type="button" value="Cancelar" id="btnCancelar" class="noCentrar">
+             <input type="hidden" name="txtId">
+             </p>
+               
+            </form>
+        </section>
+        <section class="seccion-tabla">
+            <h2>Anuncios</h2>
+            <div class="spinner"></div>
+            <div id="tabla"></div>
+        </section>
+    </main>  
+</body>
+</html>
